@@ -19,8 +19,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.integradora.paseleguero.ui.screen.LoginScreen
+import com.integradora.paseleguero.ui.screen.RegisterScreen
 import com.integradora.paseleguero.ui.theme.PaseleGueroTheme
 import com.integradora.paseleguero.ui.viewmodel.LoginViewModel
+import com.integradora.paseleguero.ui.viewmodel.RegisterViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,12 +32,16 @@ class MainActivity : ComponentActivity() {
             PaseleGueroTheme {
                 val navController = rememberNavController()
                 val loginViewModel: LoginViewModel = viewModel()
+                val registerViewModel: RegisterViewModel = viewModel()
                 NavHost(
                     navController = navController,
                     startDestination = "login"
                 ) {
                     composable("login") {
                         LoginScreen(viewModel = loginViewModel, navController = navController)
+                    }
+                    composable("register") {
+                        RegisterScreen(viewModel = registerViewModel, navController = navController)
                     }
                     }
                 }
