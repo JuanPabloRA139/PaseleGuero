@@ -13,6 +13,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            
             val navController = rememberNavController()
             Surface(color = MaterialTheme.colorScheme.background) {
                 NavGraph(navController = navController)
