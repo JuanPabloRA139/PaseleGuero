@@ -8,6 +8,7 @@ import androidx.compose.material3.Surface
 import androidx.navigation.compose.rememberNavController
 import com.utez.paseleguero.ui.navigation.NavGraph
 
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
